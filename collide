@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Colisao : MonoBehaviour
+{
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("O objeto " + collision.gameObject.name + " colidiu com " + gameObject.name);
+    }
+
+    void OnCollisionStay(Collision collision)
+    {
+        Debug.Log("O objeto " + collision.gameObject.name + " está em colisão com " + gameObject.name);
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        Debug.Log("O objeto " + collision.gameObject.name + " saiu da colisão com " + gameObject.name);
+    }
+}
